@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Edit Todo{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto px-6 py-10 bg-white shadow rounded">
+  <h1 class="text-2xl font-bold mb-4">Edit Todo</h1>
+  <form method="post" action="/todos/{{ todo.id }}/edit" class="space-y-4">
+    <input type="hidden" name="_method" value="patch" />
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Name</label>
+      <input name="name" type="text" value="{{ todo.name }}" class="mt-1 block w-full border border-gray-300 p-2 rounded" required />
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Description</label>
+      <textarea name="description" class="mt-1 block w-full border border-gray-300 p-2 rounded" required>{{ todo.description }}</textarea>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Start Time</label>
+      <input name="start_time" type="datetime-local" value="{{ todo.start_time.strftime('%Y-%m-%dT%H:%M') }}" class="mt-1 block w-full border border-gray-300 p-2 rounded" required />
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700">End Time</label>
+      <input name="end_time" type="datetime-local" value="{{ todo.end_time.strftime('%Y-%m-%dT%H:%M') }}" class="mt-1 block w-full border border-gray-300 p-2 rounded" required />
+    </div>
+
+    <div class="flex space-x-4">
+      <button type="submit" formaction="/todos/{{ todo.id }}" formmethod="post" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Update</button>
+      <form method="post" action="/todos/{{ todo.id }}/delete" onsubmit="return confirm('Are you sure?');">
+        <button type="submit" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded">Delete</button>
+      </form>
+    </div>
+  </form>
+</div>
+{% endblock %}
