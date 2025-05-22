@@ -6,7 +6,7 @@
 - [SMA Backtest Strategy](quant-project/README.md)
 
 ## 🌐 Web Dev Internship
-- [Task Tracker App](web-dev-internship/README.md)
+- [Task Tracker App](https://github.com/Eghogh0/portfolio-projects/tree/d219ca59a261ad120301ca615837bc17e36a50af/Task%20Tracker)
 
 ## 🎨 Design Work
 - Posters, thumbnails, and more in [graphics-design](graphics-design/)
