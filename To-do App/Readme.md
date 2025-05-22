@@ -17,11 +17,4 @@ A simple and efficient web-based Todo application built with **FastAPI**, **Jinj
 - [Docker](https://www.docker.com/)
 - [HTML/CSS](https://developer.mozilla.org/en-US/docs/Web)
 
-## 📦 Installation
-
-1. **Clone the repository**
-
-```bash
-git clone https://github.com/Eghogh0/todo-app.git
-cd todo-app
 
